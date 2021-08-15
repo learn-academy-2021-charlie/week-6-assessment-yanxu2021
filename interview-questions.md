@@ -22,12 +22,13 @@ Then, research the question to expand on your answer. Even if you feel you have 
 ## 2. Which RESTful API routes must always be passed params? Why?
 
   **Your answer:**
-  -  There are 7 different RESTful routes pattern to follow when creating an application or web service that will interact with the server: index, new, create, show, eidt, update, and destroy.'show\edit\update\destroy' must always be passed params property.
-  - Why?  RESTful is a pattern to follow when structring routes between the server and client. Restful routes are attempt to bring the operations that can be applied to an object into HTTP requests. Instead of relying solely on the URL to indicate what to visit, a RESTful route depends on **the HTTP verb and the URL.** Parameters are variables that passed to API routes, without params, you cannot take that action on the resource.
+  - There are 7 different RESTful routes pattern to follow when creating an application or web service that will interact with the server: index, new, create, show, eidt, update, and destroy.'edit\update\destroy' must always be passed params property.
+  - Why? Accessing resource doesn't need params or not necessary but manipulating the information(resource) going to and coming from the database of the application.
 
   **Researched answer:**
   - RESTful routing is a set of standards used in many different languages to create efficient, reusable routes. It aims to map HTTP methods (GET, POST, PATCH, DELETE) and CRUD actions (Create, Read, Update, Destroy) together in a conventional pattern.
   - API parameters are the variable parts of a resource. They determine the type of action you want to take on the resource. Each parameter has a name, value type and optional description. Whenever you want to build a RESTful API, you have to decide which parameters should be present in the API endpoint.
+  - RESTful is a pattern to follow when structring routes between the server and client. Restful routes are attempt to bring the operations that can be applied to an object into HTTP requests. Instead of relying solely on the URL to indicate what to visit, a RESTful route depends on **the HTTP verb and the URL.** Parameters are variables that passed to API routes, without params, you cannot take that action on the resource.
   - REST APIs have several types of parameters:
     1. *Header parameters*: Parameters included in the request header, usually related to authorization.
     2. *Path parameters*: Parameters within the path of the endpoint, before the query string (?). These are usually set off within curly braces.
