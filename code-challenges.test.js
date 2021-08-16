@@ -1,9 +1,5 @@
 // ASSESSMENT 6: JavaScript Coding Practical Questions with Jest
 
-const { Accumulator } = require("bser")
-const { sum, isArray } = require("lodash")
-const { strict } = require("yargs")
-
 // Please read all questions thoroughly
 // Pseudo coding is REQUIRED
 // If you get stuck, please leave comments to help us understand your thought process
@@ -87,8 +83,6 @@ const infoTaker = (arr) =>{
 
 // a) Create a test with an expect statement using the variables provided.
 // Input: array. Output: array. Function: remainderBy3().
-// Solution: .filter() method creates a new array with all elements that pass the test implemented by the provided function.
-// .filter() does not change the original array.
 var hodgepodge1 = [23, "Heyyyy!", 45, -10, 0, "Yo", false]
 // Expected output: [ 2, 0, -1, 0 ]
 var hodgepodge2 = [5, "Hola", 43, -34, "greetings", true]
@@ -102,6 +96,8 @@ describe("The remainderBy3 function.", () =>{
 })
 
 // b) Create the function that makes the test pass.
+// Solution: .filter() method creates a new array with all elements that pass the test implemented by the provided function.
+// .filter() does not change the original array.
 const remainderBy3 = (arr) =>{
   if(!isArray(arr)){
     return 'Please input an array.'
