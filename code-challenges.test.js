@@ -46,7 +46,7 @@ describe("The infoTaker function.", () =>{
 // from string to string-->first name and last name by using .split() ...then .join()
 
 // Step 2: capitalize not only first name but also last name.
-// nameArr.map(str[0].toUpperCase() + str.slice(1))
+// str[0].toUpperCase() + str.slice(1)
 
 // Step 3: pack data to return.
 // Output-->[''First name + Last name '+ is a occupation', ..., ..., ...  ]
@@ -57,12 +57,12 @@ const infoTaker = (arr) =>{
   }else{
     return arr.map(obj =>{
       let nameArr = obj.name.split(' ')
-      //console.log(nameArr)-->Get name array-->["ford", "prefect" ]
+      //console.log(nameArr)-->Get name array-->e.g.["ford", "prefect" ]
 
       let nameStr = nameArr.map(str =>{
           return str[0].toUpperCase() + str.slice(1)
         }).join(' ')
-      //console.log(capitalizeName)-->Get name string-->["Ford", "Prefect"]
+      //console.log(nameStr)-->Get name string-->e.g.["Ford", "Prefect"]
 
       return `${nameStr} is a ${obj.occupation}.`
     })
